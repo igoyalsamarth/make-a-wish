@@ -16,7 +16,7 @@ export default async function Home() {
       {data['data'].map((item, index) => {
         const passingProps:PassingProps = {id:item.id, message:item.message, message2:item.message2, index:index}
         return(
-          <MainMessage props={passingProps} />
+          <MainMessage props={passingProps} key={item.id}/>
         );
       })}
       <MainText />
