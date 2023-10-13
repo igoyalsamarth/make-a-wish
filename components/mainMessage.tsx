@@ -3,7 +3,6 @@ import Draggable from "react-draggable"
 import { PassingProps } from "@/app/page";
 
 export default function MainMessage(props:{props:PassingProps}) {
-    console.log(props)
     return (
         <>
         <Draggable>
