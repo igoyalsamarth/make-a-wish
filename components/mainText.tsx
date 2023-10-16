@@ -13,10 +13,9 @@ export default function MainText() {
     const [wish, setWish] = useState<string>('')
 
 
-    const handleSubmit = async(e:any) => {
-        e.preventDefault();
+    const handleSubmit = (e:any) => {
         let newPost:NewPost={message:name, message2:wish}
-        await postOneMessage(newPost);
+        postOneMessage(newPost);
     }
 
     return(
