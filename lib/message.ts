@@ -12,7 +12,6 @@ export async function getAllMessages () {
   }
 
 export async function postOneMessage(newPost:NewPost) {
-  console.log(newPost, 'recieved at apia handler')
   const data = await fetch(`https://make-a-vish.vercel.app/api/home`,{
     method:'POST',
     body: JSON.stringify(newPost)

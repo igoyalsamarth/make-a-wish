@@ -2,7 +2,6 @@ import clientPromise from "@/lib/db";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(request:NextRequest, response:NextResponse) {
-    console.log('launchinfg api')
     try{
         const client = await clientPromise;
         const db =  client.db("bhagwaan");
@@ -10,7 +9,6 @@ export async function POST(request:NextRequest, response:NextResponse) {
         const postValue = await db.collection("mongodb").insertOne({
             data: json
         })
-        console.log(postValue, 'sent to mongo' );
         return NextResponse.json((postValue),{status:201});
     } catch(error:any) {
         return new NextResponse((error.message), { status: 500 });
