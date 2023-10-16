@@ -14,7 +14,6 @@ export default function MainText() {
 
 
     const handleSubmit = (e:any) => {
-        e.preventDefault();
         let newPost:NewPost={message:name, message2:wish}
         postOneMessage(newPost);
     }
